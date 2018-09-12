@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "pug": "pug src/pug/ --hierarchy -o public -P",
+    "watch:pug": "pug src/pug/ --hierarchy -o public -P -w",
+    "webpack": "webpack",
+    "watch:webpack": "webpack -w",
+    "server": "lite-server",
+    "watch": "yarn run watch:webpack & yarn run watch:pug",
+    "start": "yarn run server & yarn run watch"
+  },
+  "dependencies": {
+    "pug": "^2.0.3",
+    "pug-cli": "https://github.com/pugjs/pug-cli.git"
+  },
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  }
+}
