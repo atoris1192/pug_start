@@ -9,9 +9,11 @@ block var
 block append meta
   +meta(metas)
 block title
-  title 最初
+  title #{metas.title}
 block body
+  include _header
   main#main
     ul.btns
       li
         a.btn(href="#") ボタン
+  include _footer
