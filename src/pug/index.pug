@@ -1,5 +1,6 @@
 extends _layout
-block var
+block vars
+  include ./_nav.pug
   - metas = {}
   - metas.title = 'title'  
   - metas.url = 'url'
@@ -12,8 +13,31 @@ block title
   title #{metas.title}
 block body
   include _header
+  case metas.title
+    when "title"
+      h1 タイトルh1
+    default
+      p タイトルP
   main#main
     ul.btns
       li
         a.btn(href="#") ボタン
+    ul
+      each val in [1,2,3,4,5]
+        li= val
+    //- p #{nav.index.title}
+    nav
+      each val in nav
+        li
+          a.nav-tem(href=val.url)
+            span.text= val.title
+    .markdown
+      :markdown-it
+        ## ソース
+        
+        まずますｐ
+        
+        * 111
+        * 222
+          * 333
   include _footer
