@@ -11,7 +11,7 @@
   "dependencies": {
     "jstransformer-markdown-it": "^2.1.0",
     "pug": "^2.0.3",
-    "pug-cli": "https://github.com/pugjs/pug-cli.git"
+    "pug-cli": "github:pugjs/pug-cli#master"
   },
   "devDependencies": {
     "lite-server": "^2.4.0"
